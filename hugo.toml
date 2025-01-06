@@ -1,3 +1,55 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://vbesse.com/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Welcome to my own blog'
+theme = 'color-your-world'
+
+# Used only in the RSS file
+copyright = "Copyright © 2024, Valentin Besse; All rights reserved."
+
+enableEmoji = true
+enableInlineShortcodes = true
+
+[pagination]
+  pagerSize = 3
+
+[markup.highlight]
+  # To make use of the custom Chroma, this should be false
+  # The default is true
+  noClasses = false
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)'], ['$ ', ' $']]
+
+[params]
+  
+  # Site description
+  description = "Valentin Besse's personal website"
+  
+  # Footer text
+  # Each value will become a paragraph
+  # Keep it as an array
+  footerText = [ "Generated with [Hugo](https://gohugo.io) using the [Color Your World](https://gitlab.com/rmaguiar/hugo-theme-color-your-world) theme." ]
+
+  # Site cover, for Open Graph, Twitter Cards and Schema.org
+  # It will be used if the current page doesn't have a image cover
+  # File will be picked from the "assets" directory
+  # Comment the lines if you don't want to use it
+  #cover     = "img/cover.jpg"
+  #coverAlt  = "A placeholder that doesn't deserve to be described."
+
+  # Shows a message in the footer about JavaScript being disabled
+  # The default is false
+  hasNoscriptNotice = true
+
+# Default path for images in posts
+  # ie.: "content/some-post/img"
+  # Can also be set PER PAGE
+  # It can be used to reduce repetition
+  # There's no default value
+  imgPath = "img"
